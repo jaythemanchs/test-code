@@ -1,0 +1,30 @@
+<html>
+<body>
+
+<p id="demo">Waiting for data.</p>
+<style>
+    /* Light mode */
+@media (prefers-color-scheme: dark) {
+  body {
+      background-color: black;
+      color: white;
+  }
+}
+</style>
+<script>
+var myVar = setInterval(myTimer, 1);
+
+function myTimer() {
+  var d = new Date();
+  var greeting;
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    greeting = "You're in dark mode.";
+  } else {
+    greeting = "You're in light mode.";
+  }
+  document.getElementById("demo").innerHTML = greeting;
+}
+</script>
+
+</body>
+</html>
