@@ -12,17 +12,16 @@
 }
 </style>
 <script>
-var myVar = setInterval(myTimer, 1);
+var messageInterval = setInterval(message, 100);
 
-function myTimer() {
-  var d = new Date();
-  var greeting;
+function message() {
+  var scheme;
   if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    greeting = "You're in dark mode.";
+    scheme = "You're in dark mode.";
   } else {
-    greeting = "You're in light mode.";
+    scheme = "You're in light mode.";
   }
-  document.getElementById("demo").innerHTML = greeting;
+  document.getElementById("demo").innerHTML = scheme;
 }
 </script>
 
